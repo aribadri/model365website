@@ -1,0 +1,156 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* width: 100%; */
+}
+/* svg {
+  z-index: 100;
+} */
+
+.svgcontainer {
+  width: 0%;
+  position: relative;
+  margin: 0px auto;
+  animation: sk-scale 5.5s ease-in;
+  animation-iteration-count:1;
+  border-radius: 50%;
+  opacity: 1;
+  transition: width 0.05s;
+
+ 
+
+}
+@keyframes sk-scale {
+  0% {
+  width: 7%;
+
+  }
+  
+   50% {
+  width: 7%;
+
+
+  }
+  
+  100% {
+  width: 0;
+  /* opacity: 0; */
+
+  }
+ 
+}
+
+circle {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+  -webkit-animation: pulsing 2s infinite;
+  animation: change_fill 3s;
+  animation: transform 3s infinite;
+  /* border-radius: 100%; */
+  -webkit-animation: sk-scaleout 4.0s ease-out;
+  animation-iteration-count:1;
+
+  animation: sk-scaleout 4.0s ease-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0);
+    
+  }
+
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(1);
+  }
+}
+
+
+@keyframes change_fill {
+  0% {
+    fill: white;
+  }
+
+  100% {
+    fill: black;
+  }
+}
+
+path {
+  fill: white;
+  animation: change_fil 4s;
+  animation-iteration-count:1;
+
+}
+
+@keyframes change_fil {
+  0% {
+    fill: black;
+  }
+
+  100% {
+    fill: white;
+  }
+
+
+}
+
+
+.loader {
+  stroke-dasharray: 1, 2000;
+  animation:
+    dash 1.5s ease-in-out infinite,
+    color 6s ease-in-out infinite; 
+  stroke-linecap: round;
+  animation-iteration-count:1;
+
+}
+
+
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  25% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -10px;
+  }
+
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes color {
+
+  100%,
+  0% {
+    stroke: black;
+  }
+
+ 
+}
